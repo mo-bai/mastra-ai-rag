@@ -1,0 +1,29 @@
+# ide
+.cursor
+.vscode
+.history
+
+# node
+node_modules
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macos
+.DS_Store
+
+# windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# other
+.env
+.env.*
+.mastra
+output.txt
+dist
