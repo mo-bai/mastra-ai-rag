@@ -1,4 +1,6 @@
-import { getEmbedding } from './utils'
+import 'dotenv/config'
+import { PgVector } from '@mastra/pg'
+import { getEmbedding } from './utils.js'
 
 const query = '我是高管，请问我去北京出差，公司的标准是什么样的'
 

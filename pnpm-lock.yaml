@@ -17,6 +17,9 @@ importers:
       '@mastra/core':
         specifier: ^0.10.15
         version: 0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
+      '@mastra/deployer-cloudflare':
+        specifier: ^0.10.15
+        version: 0.10.15(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(typescript@5.8.3)
       '@mastra/libsql':
         specifier: ^0.11.0
         version: 0.11.0(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))
@@ -458,6 +461,11 @@ packages:
     engines: {node: '>=20'}
     peerDependencies:
       zod: ^3.0.0
+
+  '@mastra/deployer-cloudflare@0.10.15':
+    resolution: {integrity: sha512-PBq2812PkRw3/KQVmNnfYvpnM83mcS5AivBZdV6lQ+P/WMMPSWxRP/rxmKZdAaU/yerojsUjud/u3zhJ6HQuyA==}
+    peerDependencies:
+      '@mastra/core': ^0.10.1-alpha.0
 
   '@mastra/deployer@0.10.15':
     resolution: {integrity: sha512-8v7KFEuQ2kADW/pkL58791vq3BOr8m0t4vlDoeSBpbs9pyuOQJE0y5cfX9FlSdAdtp3krFfbuXo6IDQbRN7rPQ==}
@@ -1861,6 +1869,9 @@ packages:
   clone@2.1.2:
     resolution: {integrity: sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==}
     engines: {node: '>=0.8'}
+
+  cloudflare@4.5.0:
+    resolution: {integrity: sha512-fPcbPKx4zF45jBvQ0z7PCdgejVAPBBCZxwqk1k7krQNfpM07Cfj97/Q6wBzvYqlWXx/zt1S9+m8vnfCe06umbQ==}
 
   cluster-key-slot@1.1.2:
     resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
@@ -3766,6 +3777,20 @@ snapshots:
       - valibot
       - zod-openapi
 
+  '@mastra/deployer-cloudflare@0.10.15(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(typescript@5.8.3)':
+    dependencies:
+      '@babel/core': 7.28.0
+      '@mastra/core': 0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
+      '@mastra/deployer': 0.10.15(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(typescript@5.8.3)
+      '@rollup/plugin-virtual': 3.0.2(rollup@4.44.2)
+      cloudflare: 4.5.0
+      rollup: 4.44.2
+      zod: 3.25.76
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+      - typescript
+
   '@mastra/deployer@0.10.15(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(typescript@5.8.3)':
     dependencies:
       '@babel/core': 7.28.0
@@ -5656,6 +5681,18 @@ snapshots:
       wrap-ansi: 7.0.0
 
   clone@2.1.2: {}
+
+  cloudflare@4.5.0:
+    dependencies:
+      '@types/node': 18.19.119
+      '@types/node-fetch': 2.6.12
+      abort-controller: 3.0.0
+      agentkeepalive: 4.6.0
+      form-data-encoder: 1.7.2
+      formdata-node: 4.4.1
+      node-fetch: 2.7.0
+    transitivePeerDependencies:
+      - encoding
 
   cluster-key-slot@1.1.2: {}
 

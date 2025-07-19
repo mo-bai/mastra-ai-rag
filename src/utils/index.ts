@@ -1,4 +1,4 @@
-export const getEmbedding = async (textArray) => {
+export const getEmbedding = async (textArray: string[]) => {
   let body = {
     model: 'BAAI/bge-large-zh-v1.5',
     input: textArray
@@ -18,6 +18,6 @@ export const getEmbedding = async (textArray) => {
   )
   const data = await response.json()
   console.log('data', data)
-  const embeddings = data.data.map((item) => item.embedding)
-  return embeddings
+  const embeddings = data.data.map((item: any) => item.embedding)
+  return embeddings as number[][]
 }
